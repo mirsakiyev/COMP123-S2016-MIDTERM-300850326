@@ -44,11 +44,13 @@ namespace COMP123_MidTermExam
 */
         public void GenerateLottoNumbers()
         {
-            for (int i = 0; i < 6; i++)
-            {
+            Console.WriteLine();
+            for (int i = 1; i < 7; i++)
+            {               
                 PickElements();
-                Console.WriteLine(this.ToString());
+                Console.WriteLine("Ticket " + i + ": " + this.ToString());                
             }
+            Console.WriteLine();
         }
     }
 }
