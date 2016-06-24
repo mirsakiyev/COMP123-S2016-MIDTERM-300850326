@@ -168,8 +168,9 @@ namespace COMP123_MidTermExam
 
         /**
  * <summary>
- * This method Add Integer Literals from 1 to SetSize to the read-only
- * NumberList property.
+ * calls the inherited public
+ * PickElements method and then outputs the results to the console using the overridden
+ * ToString method from the abstract superclass.
  * </summary>
  * 
  * @private

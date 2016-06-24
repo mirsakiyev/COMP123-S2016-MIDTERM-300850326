@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+* Author : Aslan Mirsakiyev
+* ID: 300850326
+*/ 
 namespace COMP123_MidTermExam
 {
     /**

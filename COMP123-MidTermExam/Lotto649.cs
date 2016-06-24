@@ -31,10 +31,24 @@ namespace COMP123_MidTermExam
 
         }
 
+        /**
+* <summary>
+* calls the inherited public
+* PickElements method and then outputs the results to the console using the overridden
+* ToString method from the abstract superclass.
+* </summary>
+* 
+* @private
+* @method _build
+* @returns {void}
+*/
         public void GenerateLottoNumbers()
         {
-            PickElements();
-            Console.WriteLine(this.ToString());
+            for (int i = 0; i < 6; i++)
+            {
+                PickElements();
+                Console.WriteLine(this.ToString());
+            }
         }
     }
 }
