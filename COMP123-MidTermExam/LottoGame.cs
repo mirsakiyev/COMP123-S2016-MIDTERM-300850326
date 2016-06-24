@@ -18,11 +18,15 @@ namespace COMP123_MidTermExam
     public abstract class LottoGame
     {
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
-        // CREATE private fields here --------------------------------------------
+
+        private List<int> _elementList = new List<int>();
+        private int _elementNumber;
+        private List<int> _numberListList = new List<int>();
+        private Random _random = new Random();
+        private int _setSize;
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
+
         // CREATE public properties here -----------------------------------------
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
