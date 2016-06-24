@@ -21,13 +21,61 @@ namespace COMP123_MidTermExam
 
         private List<int> _elementList = new List<int>();
         private int _elementNumber;
-        private List<int> _numberListList = new List<int>();
+        private List<int> _numberList = new List<int>();
         private Random _random = new Random();
         private int _setSize;
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        // CREATE public properties here -----------------------------------------
+        public List<int> ElementList
+        {
+            get
+            {
+                return this._elementList;
+            }           
+        }
+
+        public int ElementNumber
+        {
+            get
+            {
+                return this._elementNumber;
+            }
+
+            set
+            {
+                this._elementNumber = value;
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get
+            {
+                return this._numberList;
+            }           
+        }
+
+        public Random random
+        {
+            get
+            {
+                return this._random;
+            }         
+        }
+
+        public int SetSize
+        {
+            get
+            {
+                return this._setSize;
+            }
+
+            set
+            {
+                this._setSize = value;
+            }
+        }
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -56,6 +104,8 @@ namespace COMP123_MidTermExam
             // call the _build method
             this._build();
         }
+
+        
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
