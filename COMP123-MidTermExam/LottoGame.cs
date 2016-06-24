@@ -180,7 +180,7 @@ namespace COMP123_MidTermExam
         {
             for (int i = 0; i < SetSize; i++)
             {
-                ElementList.Add(i+1);
+                NumberList.Add(i+1);
             }
         }     
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -215,17 +215,19 @@ namespace COMP123_MidTermExam
 
         public void PickElements()
         {
+            if (this.ElementList.Count > 0)
+            {
+                ElementList.Clear();
+                NumberList.Clear();
+                this._build();
+            }
+
             for (int i = 0; i <= this.ElementNumber; i++)
             {
-                if (this.ElementList.Count > 0)
-                {
-                    ElementList.Clear();
-                    NumberList.Clear();
-                    this._build();
-                }
-
+               
                 int randomIndex;
                 randomIndex = this.random.Next(0, NumberList.Count);
+
                 ElementList.Add(NumberList[randomIndex]);
                 NumberList.RemoveAt(randomIndex);
 
