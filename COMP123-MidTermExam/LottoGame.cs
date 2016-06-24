@@ -116,6 +116,14 @@ namespace COMP123_MidTermExam
             this._random = new Random();
         }
 
+        private void _build()
+        {
+            for (int i = 0; i < SetSize; i++)
+            {
+                ElementList.Add(i);
+            }
+        }
+        
         // CREATE the private _initialize method here -----------------------------
 
         // CREATE the private _build method here -----------------------------------
