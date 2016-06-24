@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="COMP123_MidTermExam.Program" Collapsed="true">
-    <Position X="4" Y="5.25" Width="1.5" />
+    <Position X="6.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAIAAAAAAAAAAAAAIAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -18,7 +18,7 @@
   <Class Name="COMP123_MidTermExam.LottoGame">
     <Position X="1" Y="1.25" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAEAEAAAcIAAAIAAAAAAEAAQAAAAAAAE=</HashCode>
+      <HashCode>AgAAAAAAACgAAEAEAAAcIAAAYAAAAAAEAAQAAAAAAAE=</HashCode>
       <FileName>LottoGame.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -30,5 +30,12 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Interface Name="COMP123_MidTermExam.IGenerateLottoNumbers">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGenerateLottoNumbers.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

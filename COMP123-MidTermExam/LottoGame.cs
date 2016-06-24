@@ -27,6 +27,13 @@ namespace COMP123_MidTermExam
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+        /**
+    * <summary>
+    * This is a public property for our private _elementList field
+    * </summary>
+    * 
+    * @property {List<int>} ElementList
+    */
         public List<int> ElementList
         {
             get
@@ -35,6 +42,14 @@ namespace COMP123_MidTermExam
             }           
         }
 
+
+        /**
+        * <summary>
+        * This is a public property for our private _elementNumber field
+        * </summary>
+        * 
+        * @property {int} ElementNumber
+        */
         public int ElementNumber
         {
             get
@@ -48,6 +63,14 @@ namespace COMP123_MidTermExam
             }
         }
 
+
+        /**
+        * <summary>
+        * This is a public property for our private _numberList field
+        * </summary>
+        * 
+        * @property {List<int>} NumberList
+        */
         public List<int> NumberList
         {
             get
@@ -56,6 +79,14 @@ namespace COMP123_MidTermExam
             }           
         }
 
+
+        /**
+        * <summary>
+        * This is a public property for our private _random field
+        * </summary>
+        * 
+        * @property {Random} random
+        */
         public Random random
         {
             get
@@ -64,6 +95,14 @@ namespace COMP123_MidTermExam
             }         
         }
 
+
+        /**
+        * <summary>
+        * This is a public property for our private _setSize field
+        * </summary>
+        * 
+        * @property {int} SetSize
+        */
         public int SetSize
         {
             get
@@ -105,29 +144,45 @@ namespace COMP123_MidTermExam
             this._build();
         }
 
-        
+
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-            private void _initialize()
+        /**
+    * <summary>
+    * This method instantiates new objects for the private fields
+    * _numberList, _elementList and _random
+    * </summary>
+    * 
+    * @private
+    * @method _initialize
+    * @returns {void}
+    */
+        private void _initialize()
         {
             this._numberList = new List<int>();
             this._elementList = new List<int>();
             this._random = new Random();
         }
 
+
+        /**
+ * <summary>
+ * This method Add Integer Literals from 1 to SetSize to the read-only
+ * NumberList property.
+ * </summary>
+ * 
+ * @private
+ * @method _build
+ * @returns {void}
+ */
         private void _build()
         {
             for (int i = 0; i < SetSize; i++)
             {
-                ElementList.Add(i);
+                ElementList.Add(i+1);
             }
-        }
-        
-        // CREATE the private _initialize method here -----------------------------
-
-        // CREATE the private _build method here -----------------------------------
-
+        }     
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         /**
@@ -157,6 +212,29 @@ namespace COMP123_MidTermExam
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        // CREATE the public PickElements method here ----------------------------
+
+        public void PickElements()
+        {
+            for (int i = 0; i <= this.ElementNumber; i++)
+            {
+                if (this.ElementList.Count > 0)
+                {
+                    ElementList.Clear();
+                    NumberList.Clear();
+                    this._build();
+                }
+
+                int randomIndex;
+                randomIndex = this.random.Next(0, NumberList.Count);
+                ElementList.Add(NumberList[randomIndex]);
+                NumberList.RemoveAt(randomIndex);
+
+                
+            }
+
+            ElementList.Sort();
+          
+        }
+        
     }
 }
