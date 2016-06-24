@@ -109,6 +109,13 @@ namespace COMP123_MidTermExam
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+            private void _initialize()
+        {
+            this._numberList = new List<int>();
+            this._elementList = new List<int>();
+            this._random = new Random();
+        }
+
         // CREATE the private _initialize method here -----------------------------
 
         // CREATE the private _build method here -----------------------------------
