@@ -33,13 +33,13 @@ namespace COMP123_MidTermExam
 
         /**
 * <summary>
-* calls the inherited public
+* This method calls the inherited public
 * PickElements method and then outputs the results to the console using the overridden
 * ToString method from the abstract superclass.
 * </summary>
 * 
 * @private
-* @method _build
+* @method GenerateLottoNumbers
 * @returns {void}
 */
         public void GenerateLottoNumbers()

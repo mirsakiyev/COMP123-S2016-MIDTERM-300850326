@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-* Author : Aslan Mirsakiyev
-* ID: 300850326
-*/ 
+ * Mid-Term Test - Programming 2 - COMP123
+ * Author : Aslan Mirsakiyev
+ * StudentID: 300850326
+ * Date : 24 of June 2016
+ * GitHub Link : https://github.com/mirsakiyev/COMP123-S2016-MIDTERM-300850326.git
+ */
 namespace COMP123_MidTermExam
 {
     /**

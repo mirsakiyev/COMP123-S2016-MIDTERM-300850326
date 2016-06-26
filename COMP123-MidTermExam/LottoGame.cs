@@ -17,7 +17,9 @@ namespace COMP123_MidTermExam
      */
     public abstract class LottoGame
     {
-        // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //----------------------------------------------------------------------------------------------
+        //----------------------PRIVATE INSTANCE VARIABLES(FIELDS)--------------------------------------
+        //----------------------------------------------------------------------------------------------
 
         private List<int> _elementList = new List<int>();
         private int _elementNumber;
@@ -25,15 +27,17 @@ namespace COMP123_MidTermExam
         private Random _random = new Random();
         private int _setSize;
 
-        // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //----------------------------------------------------------------------------------------------
+        //----------------------PUBLIC PROPERTIES-------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
 
-        /**
-    * <summary>
-    * This is a public property for our private _elementList field
-    * </summary>
-    * 
-    * @property {List<int>} ElementList
-    */
+       /**
+        * <summary>
+        * This is a public property for our private _elementList field
+        * </summary>
+        * 
+        * @property {List<int>} ElementList
+        */
         public List<int> ElementList
         {
             get
@@ -43,7 +47,7 @@ namespace COMP123_MidTermExam
         }
 
 
-        /**
+       /**
         * <summary>
         * This is a public property for our private _elementNumber field
         * </summary>
@@ -64,7 +68,7 @@ namespace COMP123_MidTermExam
         }
 
 
-        /**
+       /**
         * <summary>
         * This is a public property for our private _numberList field
         * </summary>
@@ -80,7 +84,7 @@ namespace COMP123_MidTermExam
         }
 
 
-        /**
+       /**
         * <summary>
         * This is a public property for our private _random field
         * </summary>
@@ -96,7 +100,7 @@ namespace COMP123_MidTermExam
         }
 
 
-        /**
+       /**
         * <summary>
         * This is a public property for our private _setSize field
         * </summary>
@@ -116,7 +120,10 @@ namespace COMP123_MidTermExam
             }
         }
 
-        // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------CONSTRUCTORS------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
 
         /**
          * <summary>
@@ -146,18 +153,20 @@ namespace COMP123_MidTermExam
 
 
 
-        // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //----------------------------------------------------------------------------------------------
+        //----------------------PRIVATE METHODS---------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
 
-        /**
-    * <summary>
-    * This method instantiates new objects for the private fields
-    * _numberList, _elementList and _random
-    * </summary>
-    * 
-    * @private
-    * @method _initialize
-    * @returns {void}
-    */
+       /**
+        * <summary>
+        * This method instantiates new objects for the private fields
+        * _numberList, _elementList and _random
+        * </summary>
+        * 
+        * @private
+        * @method _initialize
+        * @returns {void}
+        */
         private void _initialize()
         {
             this._numberList = new List<int>();
@@ -166,25 +175,29 @@ namespace COMP123_MidTermExam
         }
 
 
-        /**
- * <summary>
- * calls the inherited public
- * PickElements method and then outputs the results to the console using the overridden
- * ToString method from the abstract superclass.
- * </summary>
- * 
- * @private
- * @method _build
- * @returns {void}
- */
+       /**
+        * <summary>
+        * This method calls the inherited public
+        * PickElements method and then outputs the results to the console using the overridden
+        * ToString method from the abstract superclass.
+        * </summary>
+        * 
+        * @private
+        * @method _build
+        * @returns {void}
+         */
         private void _build()
         {
             for (int i = 0; i < SetSize; i++)
             {
                 NumberList.Add(i+1);
             }
-        }     
-        // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        }
+
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------OVERRIDEN METHODS-------------------------------------------------------
+        //---------------------------------------------------------------------------------------------- 
 
         /**
          * <summary>
@@ -211,9 +224,22 @@ namespace COMP123_MidTermExam
             return lottoNumberString;
         }
 
-        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------PUBLIC METHODS----------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
 
+        /**
+         * <summary>
+         * The public PickElements method randomly selects and removes
+         * numbers from the read-only NumberList property and
+         * adds them to the read-only ElementList property. 
+         * </summary>
+         * 
+         * @public
+         * @method LottoGame
+         * @returns {void}
+         */
         public void PickElements()
         {
             if (this.ElementList.Count > 0)
